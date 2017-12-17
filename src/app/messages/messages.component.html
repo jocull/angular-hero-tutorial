@@ -1,7 +1,21 @@
-<div *ngIf="getMessages().length">
-  <h2>Messages</h2>
-  <button class="clear" (click)="clear()">clear</button>
-  <div *ngFor='let message of getMessages()'>
-    {{message}}
-  </div>
+<div *ngIf="getMessages().length" style="margin-top: 15px;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Messages
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-actions>
+      <button mat-raised-button class="clear" (click)="clear()">Clear</button>
+    </mat-card-actions>
+
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor='let message of getMessages()'>
+          <pre>{{message}}</pre>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
 </div>

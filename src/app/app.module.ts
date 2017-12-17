@@ -3,6 +3,21 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import {
+  BrowserAnimationsModule,
+} from '@angular/platform-browser/animations'
+
+import {
+  MatToolbarModule,
+  MatGridListModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatListModule,
+  MatButtonModule,
+  MatCardModule,
+  MatTableModule,
+} from '@angular/material';
+
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'
 import { InMemoryDataService } from './in-memory-data-service';
 
@@ -36,6 +51,17 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+    // Animations
+    BrowserAnimationsModule,
+    // Material
+    MatToolbarModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatListModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTableModule,
   ],
   providers: [
     HeroService,
